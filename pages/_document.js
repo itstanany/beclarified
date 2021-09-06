@@ -12,7 +12,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html dir="rtl">
         <Head>
           <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png" />
