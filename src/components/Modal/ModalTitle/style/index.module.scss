@@ -1,0 +1,8 @@
+@use '../../../../styles/config'as c;
+
+.modalTitle {
+  @include c.fH5;
+  margin: 0;
+  padding: 0;
+  color: c.$black;
+}

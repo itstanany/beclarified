@@ -1,0 +1,56 @@
+.modalDropBack {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: #000;
+  opacity: 0;
+  transform: translateY(-5000px);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 1400;
+}
+
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  opacity: 0;
+  transform: translateY(-5000px);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 1500;
+
+  .content {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+    z-index: 1500;
+  }
+
+}
+
+.show {
+  opacity: 1;
+
+  &.modalDropBack {
+    opacity: 0.8;
+  }
+
+  transform: translateY(0);
+  pointer-events: visible;
+
+}
