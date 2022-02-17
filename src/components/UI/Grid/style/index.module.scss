@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(min-content, 1fr));
+  gap: 1%;
+  padding: 3px 0;
+
+  &[justifyContent="center"] {
+    justify-content: center;
+  }
+
+  &[alignItems="center"] {
+    align-items: center;
+  }
+
+  &[alignContent="center"] {
+    align-content: center;
+  }
+
+  &[justifyContent="space-between"] {
+    justify-content: space-between;
+  }
+}

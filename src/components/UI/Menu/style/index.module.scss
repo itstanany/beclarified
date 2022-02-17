@@ -1,0 +1,26 @@
+@use '../../../../styles/config'as c;
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  border: none;
+
+  li {
+    display: block;
+    width: 100%;
+  }
+
+  li:not(:last-child) {
+    border-bottom: 3px solid #eee;
+  }
+
+  &.gutterBottom {
+    li:not(:last-child) {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+.pagination {
+  text-align: center;
+}
+
+.pagination a {
+  display: inline-block;
+  text-decoration: none;
+  color: #34656c;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 5px;
+  min-width: 50px;
+  min-height: 40px;
+}
+
+.pagination a[data-active="true"] {
+  background-color: #e6f2ff;
+}
+
+.pagination a[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=index.module.css.map */

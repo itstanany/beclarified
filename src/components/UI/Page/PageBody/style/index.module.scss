@@ -1,0 +1,7 @@
+@use '../../../../../styles/config'as c;
+
+.body {
+  padding: 15px;
+  border-top: 1px solid c.$grey;
+  overflow: auto;
+}

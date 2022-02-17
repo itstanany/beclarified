@@ -1,0 +1,18 @@
+.actionIcons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .icon {
+    svg {
+      fill: currentColor;
+      width: 31px;
+      height: 31px;
+    }
+
+    padding: 2px 10px;
+    cursor: pointer;
+  }
+}

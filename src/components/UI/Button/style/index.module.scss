@@ -1,0 +1,29 @@
+@use '../../../../styles/config'as c;
+
+.btn {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 7px;
+  text-align: center;
+  color: c.$black;
+  border: 1px solid c.$off-white;
+  // font
+  @include c.fBT;
+  cursor: pointer;
+  width: 100%;
+
+  &.link {
+    border: none;
+    border-radius: 0;
+
+    .text {
+      border-bottom: 2px solid c.$blue;
+      border-color: inherit;
+      color: c.$off-blue;
+      @include c.fBT;
+    }
+  }
+
+
+}

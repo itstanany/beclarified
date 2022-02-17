@@ -1,0 +1,23 @@
+.footer {
+  text-align: center;
+  padding: 15px;
+
+  .love {
+    color: red;
+    font-size: 1.25em;
+  }
+
+  a {
+    text-decoration: none;
+    color: #a3e34f;
+    border-bottom: 2px solid #da5ada;
+
+    &:hover {
+      border-bottom-style: dashed;
+    }
+  }
+
+  address {
+    display: inline-block;
+  }
+}

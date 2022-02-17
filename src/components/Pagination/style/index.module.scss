@@ -1,0 +1,25 @@
+.pagination {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #34656c;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 5px;
+    min-width: 50px;
+    min-height: 40px;
+
+    &[data-active="true"] {
+      background-color: #e6f2ff;
+    }
+
+    &[disabled] {
+      opacity: 0.3;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  left: -9px;
+  // top: calc(100% + 15px);
+  top: 100%;
+  cursor: pointer;
+  z-index: 1500;
+  // &::before {
+  //   content: "";
+  //   border: 10px solid;
+  //   width: 10px;
+  //   height: 10px;
+  //   position: absolute;
+  //   top: -20px;
+  //   left: 16px;
+  //   border-color: transparent transparent #000 transparent;
+  //   z-index: 500;
+  // }
+}

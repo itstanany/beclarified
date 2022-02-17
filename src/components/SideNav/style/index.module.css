@@ -1,0 +1,50 @@
+.sideNav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sideNav ul li {
+  border-bottom: 3px solid #ddd7d7;
+}
+
+.sideNav ul a {
+  color: #777;
+  font-size: 1.5em;
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.sideNav ul a[data-active="true"] {
+  color: #15657c;
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.sideNav ul a span {
+  padding: 5px;
+}
+
+.sideNav ul a svg {
+  fill: currentColor;
+  height: 31px;
+  width: 31px;
+}
+
+.sideNav ul a:hover {
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+}
+
+.taskNum {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  border-radius: 50%;
+  background-color: #ff0101;
+  color: #f1f1f1;
+}
+/*# sourceMappingURL=index.module.css.map */

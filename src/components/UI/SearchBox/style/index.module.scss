@@ -1,0 +1,32 @@
+.searchBox {
+  margin: 0 auto;
+  display: block;
+  background-color: #eee;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 15px;
+
+  .icon {
+    padding: 5px;
+  }
+
+  .text {
+    flex-grow: 3;
+  }
+
+  input {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    line-height: 1.7;
+    font-size: 1em;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}

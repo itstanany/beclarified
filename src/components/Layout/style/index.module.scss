@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  .sideNav {
+    // prevent shrinkage of reducing screen size
+    min-width: 270px;
+    max-width: 270px;
+    box-shadow: -4px 0px 20px 4px #babdbc;
+    height: 100vh;
+    // make box-shadow visible
+    z-index: 2;
+    overflow-y: auto;
+  }
+
+  .container {
+    flex-grow: 5;
+    height: 100vh;
+  }
+
+  .pageWrapper {
+    width: 100%;
+    height: calc(100vh - 65px);
+    overflow: auto;
+    // make footer at bottom of page independently of page content height
+    display: flex;
+    flex-flow: column nowrap;
+
+    .footer {
+      margin-top: auto;
+    }
+  }
+}

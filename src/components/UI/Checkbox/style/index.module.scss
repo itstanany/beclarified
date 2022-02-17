@@ -1,0 +1,60 @@
+@use '../../../../styles/config'as c;
+
+.checkbox {
+  position: relative;
+  // default checkbox display mode
+  display: inline-block;
+  min-width: calc(1.6rem + 20px);
+  min-height: calc(1.6rem + 10px);
+  padding: 5px 10px;
+  cursor: pointer;
+
+  .checkboxInput {
+    appearance: none;
+
+    // &:not(:checked)::before {
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid #929493;
+      border-radius: 5px;
+      width: 1.6rem;
+      height: 1.6rem;
+      top: 5px;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    &[dir="rtl"] {
+      &::before {
+        right: 10px;
+      }
+    }
+
+    &:checked::after {
+      content: "\2713";
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-color: #0987c2;
+      border-radius: 5px;
+      font-size: 1.6rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      color: c.$white;
+      cursor: pointer;
+    }
+
+    &[dir="rtl"] {
+      &::after {
+        right: 10px;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,53 @@
+.wrapper {
+  position: relative;
+}
+
+.threeTicks {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  border-color: red;
+  cursor: pointer;
+  height: 100%;
+  padding: 2px 15px;
+
+  &:active {
+    border: none;
+  }
+
+  &:visited {
+    border: none;
+  }
+
+  .tick {
+    display: inline-block;
+    border: 3px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+  }
+
+  .tick:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+
+.menu {
+  position: absolute;
+  left: -9px;
+  top: calc(100% + 15px);
+
+  &::before {
+    content: "";
+    border: 10px solid;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    border-color: transparent transparent #000 transparent;
+    z-index: 500;
+  }
+}

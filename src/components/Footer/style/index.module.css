@@ -1,0 +1,24 @@
+.footer {
+  text-align: center;
+  padding: 15px;
+}
+
+.footer .love {
+  color: red;
+  font-size: 1.25em;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #a3e34f;
+  border-bottom: 2px solid #da5ada;
+}
+
+.footer a:hover {
+  border-bottom-style: dashed;
+}
+
+.footer address {
+  display: inline-block;
+}
+/*# sourceMappingURL=index.module.css.map */

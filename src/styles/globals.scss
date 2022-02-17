@@ -1,0 +1,29 @@
+@use './config'as c;
+
+html {
+  box-sizing: border-box;
+  font-size: c.$base-font-size;
+  font-family: 'Cairo', Arial, sans-serif;
+  line-height: calc(0.25rem + 1em);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* set font family */
+body {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+// remove outline style on element focus state,
+// see chrome update https://developers.google.com/web/updates/2020/05/nic83#forms
+*,
+*:focus,
+*:hover {
+  outline: none;
+}

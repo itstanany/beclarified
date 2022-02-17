@@ -33,53 +33,66 @@ function Modal({ show, title = null, onClose, children, ...remaining } = {}) {
   }, [show])
 
   useEffect(() => {
+    /**
+     * Close modal o Esc key press
+     */
     document && document.addEventListener('keydown', closeEsc);
     return () => {
       document && document.removeEventListener('keydown', closeEsc);
     }
   }, [closeEsc]);
 
-  console.log('inside modal component and children are');
-  console.log({ children })
+  // console.log('inside modal component and children are');
+  // console.log({ children })
 
-
+  // only mount it on show
+  // optimize memory and initial render of hosting component
+  //  by not mount unless modal to be shown
   return (
-    createUniversalPortal({
-      children: (
-        <ModalContext.Provider
-          value={
-            { show, title, onClose, children, ...remaining }
-          }
-        >
-          <div className={s.dialog}>
-            <div
-              className={`${s.modalDropBack} ${(show ? s.show : '')}`}
-              onClick={onClose}
-            ></div>
-            <div
-              className={`${s.modal} ${(show ? s.show : '')}`}
-              onClick={onClose}
-            >
-              {
-                // optimization: decrease mounting time of hidden modal
-                show
-                  ? (
-                    <div className={s.content} onClick={stopPropagation}>
-                      {
-                        children
-                      }
-                    </div>
-
-                  )
-                  : null
+    show
+      ? (
+        createUniversalPortal({
+          children: (
+            <ModalContext.Provider
+              value={
+                { show, title, onClose, children, ...remaining }
               }
-            </div>
-          </div>
-        </ModalContext.Provider>
-      ),
-      // selector: '#__next'
-      selector: 'body'
-    })
+            >
+              <div className={s.dialog}>
+                <div
+                  className={`${s.modalDropBack} ${(show ? s.show : '')}`}
+                  onClick={onClose}
+                ></div>
+                <div
+                  className={`${s.modal} ${(show ? s.show : '')}`}
+                  onClick={onClose}
+                >
+                  {/* 
+                  {
+                // optimization: decrease mounting time of hidden modal
+                // I think this approach uses more memory as it mounts not-used 
+                // components
+                show
+                  ? ( 
+                    */}
+                  <div className={s.content} onClick={stopPropagation}>
+                    {
+                      children
+                    }
+                  </div>
+
+                  {/* //     )
+                //     : null
+                // } */}
+                </div>
+              </div>
+            </ModalContext.Provider>
+          ),
+          // selector: '#__next'
+          selector: 'body'
+        })
+      )
+      : null
   );
 }
 

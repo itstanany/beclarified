@@ -1,0 +1,90 @@
+// todo letter spacing
+
+// this version of typography is based on Material typography
+// https://material.io/design/typography/the-type-system.html#type-scale
+
+// Base
+
+$base-font-size: 16px;
+
+$conversion-ratio: 0.0625;
+
+// header 1
+@mixin fH1 {
+  // font-size: 6rem;
+  font-size: #{$conversion-ratio*96}rem;
+  font-weight: 300;
+}
+
+// header 2
+@mixin fH2 {
+  font-size: #{$conversion-ratio*60}rem;
+  font-weight: 300;
+}
+
+
+// header 3
+@mixin fH3 {
+  font-size: #{$conversion-ratio*48}rem;
+  font-weight: 400;
+}
+
+// header 4
+@mixin fH4 {
+  font-size: #{$conversion-ratio*34}rem;
+  font-weight: 400;
+}
+
+// header 5
+@mixin fH5 {
+  font-size: #{$conversion-ratio*24}rem;
+  font-weight: 400;
+}
+
+// header 6
+@mixin fH6 {
+  font-size: #{$conversion-ratio*20}rem;
+  font-weight: 600;
+}
+
+// subtitle 1
+@mixin fST1 {
+  font-size: #{$conversion-ratio*16}rem;
+  font-weight: 400;
+}
+
+// subtitle 2
+@mixin fST2 {
+  font-size: #{$conversion-ratio*14}rem;
+  font-weight: 600;
+
+}
+
+// body 1
+@mixin fB1 {
+  font-size: #{$conversion-ratio*16}rem;
+}
+
+// body 2
+@mixin fB2 {
+  font-size: #{$conversion-ratio*14}rem;
+}
+
+// button
+@mixin fBT {
+  // font-size: #{$conversion-ratio*16}rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+
+// caption
+@mixin fCP {
+  font-size: #{$conversion-ratio*12}rem;
+}
+
+// overline
+@mixin fOL {
+  font-size: #{$conversion-ratio*10}rem;
+}

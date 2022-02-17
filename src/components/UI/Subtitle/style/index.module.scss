@@ -1,0 +1,8 @@
+@use '../../../../styles/config'as c;
+
+.subtitle {
+  margin: 0;
+  padding: 0;
+  color: c.$off-white;
+  @include c.fST1;
+}

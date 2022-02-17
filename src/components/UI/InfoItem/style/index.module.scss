@@ -1,0 +1,37 @@
+@use '../../../../styles/config'as c;
+
+.item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-grow: 1;
+
+  @include c.fB1;
+
+  .itemIcon {
+    display: inline-flex;
+    padding: 3px 10px 10px;
+    border-radius: 50%;
+    background-color: c.$light-blue;
+    color: c.$off-blue;
+    font-size: 1.5rem;
+    min-height: 2.6rem;
+    min-width: 3.1rem;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .right {
+    margin: 0 5px 0 auto;
+    padding: 5px;
+  }
+
+  .left {
+    color: #dcdcdc;
+    padding: 5px;
+    margin: 0;
+  }
+}
